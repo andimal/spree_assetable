@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_assetable'
-  s.version     = '2.1.5'
+  s.version     = '2.3.0'
   s.summary     = 'Adds support for assetable'
   s.description = 'Adds support for assetable'
   s.required_ruby_version = '>= 1.9.3'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.3.0.beta'
+  s.add_dependency 'spree_core', '~> 2.3.0'
   s.add_dependency 'assetable', '~> 0.2.1'
 
   s.add_development_dependency 'capybara', '~> 2.1'
