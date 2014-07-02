@@ -1,0 +1,12 @@
+<% attribute_name = 'asset' %>
+<% fieldname = "#{f.object.class.name.demodulize.downcase}[#{attribute_name}_association_attributes][asset_id]" %>
+<% hidden_field = hidden_field_tag(fieldname, nil, class: "assetable-uploader-input") %>
+<% preview = render(partial: "assetable/shared/templates/asset_item", locals: { asset: f.object.send(attribute_name), fieldname: fieldname }) %>
+<% directions_html = render(:partial => 'assetable/assets/directions') %>
+<% uploader_html = content_tag(:div, (hidden_field + preview.html_safe), class: "uploader-assets-wrapper") %>
+<% uploader_wrapper = content_tag :div, (uploader_html + directions_html.html_safe), class: "assetable-uploader" %>
+<%= uploader_wrapper %>
+
+<script>
+  window.Assetable.bind_uploaders()
+</script>
